@@ -23,7 +23,6 @@ def xls_to_json(xls_path,json_name):
         returnData['name'] = content[0]
         returnData['alias'] = content[1].split(':')[0].strip()
         returnData['ingredients'] = deal_with_ingredents(content[1])
-        print(returnData['ingredients'])
         result.append(returnData)
 
     with open(outpath+'\\'+json_name, 'w', encoding='utf-8') as json_file:
